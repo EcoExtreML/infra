@@ -1,6 +1,6 @@
-# Create the workspace on SURF research cloud (SRC) for STEMMUS-SCOPE
+# Configure the workspace on SURF research cloud (SRC) for STEMMUS-SCOPE
 
-In this guide, you will learn how to create the workspace/environment on SURF research cloud for managing the resource and running the STEMMUS-SCOPE model in the [notebook](https://github.com/EcoExtreML/STEMMUS_SCOPE_Processing/blob/main/docs/notebooks/run_model_in_notebook.ipynb).
+In this guide, you will learn how to configure the workspace/environment on SURF research cloud for managing the resource and running the STEMMUS-SCOPE model in the [notebook](https://github.com/EcoExtreML/STEMMUS_SCOPE_Processing/blob/main/docs/notebooks/run_model_in_notebook.ipynb).
 
 This guide assumes you already have access to SRC as the administrator of EcoExtreML project group.
 
@@ -15,4 +15,37 @@ To setup your workspace, you need to first log in to your [SRC portal](https://p
   - In step 5 "Options", remember to attach the storage as this is the only moment we can attach it to our workspace.
 - Log in to your workspace follwing this [documentation](https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace)).
 
-## Install 
+## Install Matlab Runtime
+ansible playbook
+install [`matlab runtime`](https://nl.mathworks.com/products/compiler/matlab-runtime.html).
+
+## Download the executable file of STEMMUS-SCOPE model
+The latest version of the executable file is available in the repo [`STEMMUS_SCOPE`](https://github.com/EcoExtreML/STEMMUS_SCOPE). We can clone this repo and copy the executable file to the shared storage:
+```py
+cd ~
+git clone https://github.com/EcoExtreML/STEMMUS_SCOPE.git
+cp STEMMUS_SCOPE/run_model_on_snellius/exe/STEMMUS_SCOPE ~/data/volume_2/
+```
+
+Note: currently `STEMMUS_SCOPE` is a private repo and therefore it is not allowed to clone it using `HTTPS`. We have to setup `SSH` connection for it.
+
+To generate a new ssh key, run the following command in your terminal:
+```sh
+ssh-keygen -t ed25519 -C "your_email@example.com"
+```
+Ensure the ssh-agent is running by checking:
+```sh
+eval "$(ssh-agent -s)"
+```
+If we can see `Agent pid xxxxx`, then you can add your SSH private key to the ssh-agent:
+```sh
+ssh-add ~/.ssh/id_ed25519
+```
+
+And finally you can add your public key to the github in `settings/SSH and GPG keys`.
+
+(For more details about generating ssh key and adding it to github, check this [documentation](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)).
+
+## Copy forcing data to the shared storage
+
+Now the users will be able to run the STEMMUS-SCOPE model using executable files after configuring their conda environment.

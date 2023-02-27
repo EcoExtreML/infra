@@ -4,11 +4,9 @@ In this guide, you will learn how to configure the conda environment in your jup
 
 This guide assumes you already have access to SRC as a user and the workspace created by the administrator of EcoExtreML project group.
 
-## Configure the conda environment for running STEMMUS-SCOPE
+In order to run STEMMUS-SCOPE on SRC, we need to configure the `conda` environment and download the executable file.
 
-In order to run STEMMUS-SCOPE on SRC, we need to configure the `conda` environment and install [`matlab runtime`](https://nl.mathworks.com/products/compiler/matlab-runtime.html).
-
-### Managing environments and kernels on this Jupyter-workspace using `conda`
+## Managing environments and kernels on this Jupyter-workspace using `conda`
 In our jupyter-workspace, `miniconda` is pre-installed at the location `/etc/miniconda`. We will use it to create virtual python environments and install [`pystemmusscope`](https://github.com/EcoExtreML/STEMMUS_SCOPE_Processing).
 
 To set up the `conda` environment:
@@ -40,6 +38,9 @@ To set up the `conda` environment:
   ```py
   python3 -m ipykernel install --user --name pystemmusscope --display-name "pystemmusscope"
   ```
+
+## Run STEMMUS-SCOPE model using the executable file
+Now we can run the STEMMUS-SCOPE model using the executable file. Open the notebook `run_model_in_notebook.ipynb` from the path `/STEMMUS_SCOPE_Processing/docs/notebooks` in your jupyter-workspace and use the `pystemmusscope` kernel.
 
 
 
