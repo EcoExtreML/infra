@@ -42,5 +42,4 @@ To set up the `conda` environment:
 ## Run STEMMUS-SCOPE model using the executable file
 Now we can run the STEMMUS-SCOPE model using the executable file. Open the notebook `run_model_in_notebook.ipynb` from the path `/STEMMUS_SCOPE_Processing/docs/notebooks` in your jupyter-workspace and use the `pystemmusscope` kernel.
 
-
-
+Before executing the notebook, remember to modify the `config` file. Note that the executable file and all the related forcing files are stored at `~/data/volume_2/`.

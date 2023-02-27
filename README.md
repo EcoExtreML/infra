@@ -14,4 +14,4 @@ To log in to the SRC, click [here](https://portal.live.surfresearchcloud.nl/)
 For system administrators who want to create workspace on SURF research cloud for configuring the environment and running the STEMMUS-SCOPE model, please check [this document](./create_workspace.md).
 
 ## Setup environment
-For users who want to configure the jupyter-workspace environment via conda and install `pystemmusscope`, please check [this document](./setup_environment.md).
+For users who want to configure the jupyter-workspace environment via conda and install `pystemmusscope` to execute the [notebook](https://github.com/EcoExtreML/STEMMUS_SCOPE_Processing/blob/main/docs/notebooks/run_model_in_notebook.ipynb), please check [this document](./setup_environment.md).

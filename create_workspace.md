@@ -16,8 +16,12 @@ To setup your workspace, you need to first log in to your [SRC portal](https://p
 - Log in to your workspace follwing this [documentation](https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace)).
 
 ## Install Matlab Runtime
-ansible playbook
-install [`matlab runtime`](https://nl.mathworks.com/products/compiler/matlab-runtime.html).
+To intall Matlab Runtime for all users, we must use `ansible playbook`.
+An example `ansible-playbook` showing how to install matlab runtime is available [here](./matlab_runtime.yml). Please copy this notebook in your jupyter-workspace and run the following command to download and install matlab runtime:
+
+```sh
+ansible-playbook matlab_runtime.yml
+```
 
 ## Download the executable file of STEMMUS-SCOPE model
 The latest version of the executable file is available in the repo [`STEMMUS_SCOPE`](https://github.com/EcoExtreML/STEMMUS_SCOPE). We can clone this repo and copy the executable file to the shared storage:
