@@ -18,5 +18,3 @@ After creating your own account, you will:
 4. Click on "Vraag lidmaatschap voor ecoextreml-nlesc" (meaning "Request membership for ecoextreml-nlesc").
 5. Now write a motivation, tick the conditions and click "Aanvragen" (meaning "Request").
 Your request is now pending! The administrators will receive an email and accept your request!
-
-After 
