@@ -9,11 +9,13 @@ This guide assumes you already have access to SRC as the administrator of EcoExt
 To setup your workspace, you need to first log in to your [SRC portal](https://portal.live.surfresearchcloud.nl/) and follow the steps below:
 
 - Create your storage (see the [documentation](https://servicedesk.surf.nl/wiki/display/WIKI/External+storage+volumes)).
+  - Root disk (/) is too small to hold data like forcing, so an extra storage volume (/data/volume_2) is needed.
+  - Choose a volume size of at least 250Gb
 - Create a new workspace and attach your storage to it (see the [documentation](https://servicedesk.surf.nl/wiki/display/WIKI/Start+a+simple+workspace)).
   - There are multiple pre-defiend set of virtual machines/working environments (which are called [<strong><em>flavours</em></strong>](https://servicedesk.surf.nl/wiki/display/WIKI/SRC+Available+Flavours)) available on SRC.
   - To set up the environment for STEMMUS-SCOPE, we only need to choose `SURF HPC Cloud` and `jupyter-workspace` environment with preferred quantity of cpu cores and memory (e.g. 2 cpu cores and 16 GB RAM).
   - In step 5 "Options", remember to attach the storage as this is the only moment we can attach it to our workspace.
-- Log in to your workspace follwing this [documentation](https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace)).
+- Log in to your workspace following this [documentation](https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace)).
 
 ## Install Matlab Runtime
 To intall Matlab Runtime for all users, it is easy to use `ansible playbook`.
@@ -28,7 +30,7 @@ The latest version of the executable file is available in the repo [`STEMMUS_SCO
 ```py
 cd ~
 git clone https://github.com/EcoExtreML/STEMMUS_SCOPE.git
-cp STEMMUS_SCOPE/run_model_on_snellius/exe/STEMMUS_SCOPE ~/data/volume_2/
+cp STEMMUS_SCOPE/run_model_on_snellius/exe/STEMMUS_SCOPE /data/volume_2/
 ```
 
 Note: currently `STEMMUS_SCOPE` is a private repo and therefore it is not allowed to clone it using `HTTPS`. We have to setup `SSH` connection for it.
@@ -62,6 +64,7 @@ The server will ask for your password. After typing the correct password, you sh
 
 ```sh
 cd /path_to_data
+lcd /data/volume2/forcing
 get <file>
 ```
 

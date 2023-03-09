@@ -5,7 +5,7 @@ This manual shows you how to get access to the (Jupyter Hub) workspace/environme
 After creating your own account, you will:
 - Get your own account (i.e., your own Jupyter Lab environment).
 - Have access to our shared memory (e.g. 1.5TB) where the forcing data is available in `/data/volume_2/`. 
-- All changes in your local home Jupyter lab environment will be stored (if you save them) after you log-out.
+- All changes in your home directory on the Jupyter lab workspace will be stored (if you save them) after you log-out.
 
 1. First you will have to become a member of our research cloud collaboration (e.g. ecoextreml-nlesc). Please click on the invitation link and you will be redirected to a login page.
 2. If your institution is there (as shown below)*, you will be redirected to your institutional login page and there you can login with your institute credentials. 

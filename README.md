@@ -6,7 +6,7 @@ This is an instruction about how to set up [SURF research cloud](https://www.sur
 - For administrators, ask SURF for invitation.
 - For users trying to access the existing workspace, ask administrators to invite you. 
 
-Administrators can invite users to access the created workspace on SRC via the `SURF Research Access Management system`. To access the SURF Research Access Management system, visit [this site](https://sram.surf.nl/). The administrators can send invitations to new users following this [documentation](https://servicedesk.surf.nl/wiki/display/WIKI/Invite+colleagues+to+a+CO).
+Administrators can invite users to access the created workspace on SRC via the `SURF Research Access Management system`. To access the SURF Research Access Management system, visit [this site](https://sram.surf.nl/). The administrators can send invitations to new users following this [documentation](https://servicedesk.surf.nl/wiki/display/WIKI/Invite+colleagues+to+a+CO). Administrators should be invited with admin role.
 
 As a new user, after receiving the invitation link, you can follow this [doc](./as_new_user.md) to create your account on SRC and access the workspace.
 
