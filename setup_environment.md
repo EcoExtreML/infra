@@ -19,7 +19,7 @@ To set up the `conda` environment:
   ```py
   (base) metheuser@mywsp:
   ```
-  (When you log in to your jupyter-workspace for the first time, a notebook called "KERNEL-README.ipynb" will be created by default and it is accessbile from files panel. In this notebook, you can find the guidelines about how to manage environments and kernels on this Jupyter-workspace.)
+  (When you log in to your jupyter-workspace for the first time, a notebook called `KERNEL-README.ipynb` will be created by default and it is accessbile from files panel. In this notebook, you can find the guidelines about how to manage environments and kernels on this Jupyter-workspace.)
 
 - Since this `miniconda` tool is shared by all the users on this jupyter-workspace, you should not use/modify this `base` environment. Instead, you can create and activate another pystemmusscope conda environment using the [`environment.yml`](https://github.com/EcoExtreML/STEMMUS_SCOPE_Processing/blob/main/environment.yml) file. Let's first clone the [`STEMMUS_SCOPE_Processing`](https://github.com/EcoExtreML/STEMMUS_SCOPE_Processing) repo to our workspace using `HTTPS` (not via `SSH`, otherwise you need to configure your ssh key):
   ```py

@@ -13,9 +13,14 @@ To setup your workspace, you need to first log in to your [SRC portal](https://p
   - Choose a volume size of at least 250Gb
 - Create a new workspace and attach your storage to it (see the [documentation](https://servicedesk.surf.nl/wiki/display/WIKI/Start+a+simple+workspace)).
   - There are multiple pre-defiend set of virtual machines/working environments (which are called [<strong><em>flavours</em></strong>](https://servicedesk.surf.nl/wiki/display/WIKI/SRC+Available+Flavours)) available on SRC.
-  - To set up the environment for STEMMUS-SCOPE, we only need to choose `SURF HPC Cloud` and `jupyter-workspace` environment with preferred quantity of cpu cores and memory (e.g. 2 cpu cores and 16 GB RAM).
+  - To set up the environment for STEMMUS-SCOPE, we only need to choose `SURF HPC Cloud` with preferred quantity of cpu cores and memory (e.g. 2 cpu cores and 16 GB RAM).
   - In step 5 "Options", remember to attach the storage as this is the only moment we can attach it to our workspace.
 - Log in to your workspace following this [documentation](https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace)).
+
+After login, you will find a notebook listed in the files named `KERNEL-README.ipynb`, which shows how to use the pre-installed `miniconda` environment on SRC. To make sure that every new user that log in to this workspace can have this manual, please execute the following command:
+```sh
+cp ~/KERNEL-README.ipynb /etc/skel
+```
 
 ## Install Matlab Runtime
 To intall Matlab Runtime for all users, it is easy to use `ansible playbook`.
@@ -26,11 +31,11 @@ ansible-playbook install_matlab_runtime.yml
 ```
 
 ## Download the executable file of STEMMUS-SCOPE model
-The latest version of the executable file is available in the repo [`STEMMUS_SCOPE`](https://github.com/EcoExtreML/STEMMUS_SCOPE). We can clone this repo and copy the executable file to the shared storage:
+The latest version of the executable file is available in the repo [`STEMMUS_SCOPE`](https://github.com/EcoExtreML/STEMMUS_SCOPE). We can clone this repo and copy it to the shared storage:
 ```py
 cd ~
 git clone https://github.com/EcoExtreML/STEMMUS_SCOPE.git
-cp STEMMUS_SCOPE/run_model_on_snellius/exe/STEMMUS_SCOPE /data/volume_2/
+cp STEMMUS_SCOPE /data/volume_2/
 ```
 
 Note: currently `STEMMUS_SCOPE` is a private repo and therefore it is not allowed to clone it using `HTTPS`. We have to setup `SSH` connection for it.
