@@ -12,6 +12,7 @@ To setup your workspace, you need to first log in to your [SRC portal](https://p
   - Root disk (/) is too small to hold data like forcing, so an extra storage volume (/data/volume_2) is needed.
   - Choose a volume size of at least 250Gb
 - Create a new workspace and attach your storage to it (see the [documentation](https://servicedesk.surf.nl/wiki/display/WIKI/Start+a+simple+workspace)).
+  - Select `Jupyter Notebook` as application.
   - There are multiple pre-defiend set of virtual machines/working environments (which are called [<strong><em>flavours</em></strong>](https://servicedesk.surf.nl/wiki/display/WIKI/SRC+Available+Flavours)) available on SRC.
   - To set up the environment for STEMMUS-SCOPE, we only need to choose `SURF HPC Cloud` with preferred quantity of cpu cores and memory (e.g. 2 cpu cores and 16 GB RAM).
   - In step 5 "Options", remember to attach the storage as this is the only moment we can attach it to our workspace.
