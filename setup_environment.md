@@ -42,6 +42,6 @@ To set up the `conda` environment:
 ## Run STEMMUS-SCOPE model using the executable file
 Now we can run the STEMMUS-SCOPE model using the executable file. Open the notebook `run_model_in_notebook.ipynb` from the path `/STEMMUS_SCOPE_Processing/docs/notebooks` in your jupyter-workspace and use the `pystemmusscope` kernel.
 
-Before executing the notebook, remember to modify the `config` file and create your work directory. Note that the executable file and all the related forcing files are stored at `/data/volume_2/`.
+Before executing the notebook, remember to modify the `config` file and create your work directory. If you want to put the work directory on the shared storage (`/data/volume_2/`), remember to create your own folder to avoid conflicts. Note that the executable file and all the related forcing files are stored at `/data/volume_2/`.
 
 Note: if this message "`error while loading shared libraries`" occurs when running the notebook in your jupyter-workspace after configuring the environment properly, please execute the cell for setting the `LD_LIBRARY_PATH`.
