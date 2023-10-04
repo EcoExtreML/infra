@@ -16,13 +16,7 @@ Administrators can invite users to access the created workspace on SRC via the `
 ## For users
 
 #### Access to SRC
-For users trying to access the existing workspace, first ask administrators to invite you. 
-
-After receiving the invitation link, you can follow this [doc](./as_new_user.md) to create your account on SRC and access the workspace.
-
-To log in to the SRC, click [here](https://portal.live.surfresearchcloud.nl/)
-
-To access your workspace, follow this [instruction](https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace).
+For users trying to access the existing workspace, first ask administrators to invite you. After receiving the invitation link, you can follow this [doc](./as_new_user.md) to create your account on SRC and access the workspace. To log in to the SRC, click [here](https://portal.live.surfresearchcloud.nl/). To access your workspace, follow this [instruction](https://servicedesk.surf.nl/wiki/display/WIKI/Log+in+to+your+workspace).
 
 #### Setup environment
 For users who want to configure the jupyter-workspace environment via conda and install `pystemmusscope` to execute the [notebook](https://github.com/EcoExtreML/STEMMUS_SCOPE_Processing/blob/main/docs/notebooks/run_model_in_notebook.ipynb), please check [this document](./setup_environment.md).
